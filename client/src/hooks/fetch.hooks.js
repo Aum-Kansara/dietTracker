@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { getUsername } from "../helper/helper";
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config()
+// dotenv.config()
 axios.defaults.baseURL = process.env.REACT_APP_BASEURL;
 
 export default function useFetch(query) {
