@@ -8,7 +8,6 @@ import Recovery from "./components/Recovery";
 import Register from "./components/Register";
 import Reset from "./components/Reset";
 import Username from "./components/Username";
-import Temp from "./components/temp";
 import Home from "./components/Home";
 
 import { AuthorizeUser, ProtectRoute } from "./middleware/auth";
