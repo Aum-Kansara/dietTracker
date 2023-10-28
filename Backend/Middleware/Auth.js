@@ -1,14 +1,15 @@
 import jwt from "jsonwebtoken";
-import ENV from "../config.js";
+import dotenv from 'dotenv';
 
 export default async function auth(req, res, next) {
   try {
+    dotenv.config()
     // access authorize header to validate request
     // so we have to first login and create user token and
     // that token will be passed while PUT request in "AUTH Bearer" at "Bearer Token"
     const token = req.headers.authorization.split(" ")[1];
 
-    const decodedToken = await jwt.verify(token, ENV.JWT_SECRET);
+    const decodedToken = await jwt.verify(token, process.env.JWT_SECRET);
 
     req.user = decodedToken;
 
