@@ -4,7 +4,7 @@ import { getUsername } from "../helper/helper";
 // import dotenv from 'dotenv';
 
 // dotenv.config()
-axios.defaults.baseURL = process.env.REACT_APP_BASEURL;
+axios.defaults.baseURL = "diet-tracker-api.vercel.app";
 
 export default function useFetch(query) {
   const [getData, setData] = useState({
